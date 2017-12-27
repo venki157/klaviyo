@@ -7,3 +7,9 @@ This project consists of two microservices and developed using SpringBoot.
       iii) Sends a mail to the user using registered email.
       
  
+ Prerequisites:
+ In order to run this app, we need the following mandatory services which should be running.
+ 
+ 1) RabbitMQ service => Run on the port 5672.
+ 2) MySQL server     => Run on port 3306 with a database name "weatherdb".
+ 3) weatherunderground account to get the weather details.
