@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+</head>
+<body ng-app="module">                        
+<h2>Weather Application</h2>
+<div ng-controller="UserController">
+  <form name="myForm">
+  	<table border="1">
+  		<tbody>
+  			<tr><td>
+				<label for="email"> Enter Email </label> <br/> <br/>
+			</tr>
+			<tr><td>
+			<input type="text" ng-model="email"/><br/><br/>
+			</td></tr>
+			<tr><td>
+			<label for="city"> Location </label> <br/> <br/>
+			</td></tr>
+			<tr><td>
+			<select name="repeatSelect" id="repeatSelect" ng-model="city">
+				<option value="">---Where do you live?---</option>
+		      	<option ng-repeat="option in data.availableOptions" value="{{option.id}}">{{option.name}}</option>
+		    </select>
+		    </td></tr>
+		    <tr><td>
+		    		<input type="submit" id="submit" value="Subscribe"  ng-click="postdata(email,city)"/>
+		    </td></tr>
+		    
+    </tbody>
+    </table>
+</form>	
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"> </script>
+<script src="Scripts/app.js"></script>
+</body>
+</html>
